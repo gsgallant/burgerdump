@@ -7,38 +7,30 @@
 var path = require('path');
 var connection = require('../config/connection.js');
 
+console.log("api-routes connected");
+
+
 module.exports = function(app){
 
-app.post('/add', function(req,res) {
-    // //mySQL commands
-    // connection.query('SELECT * FROM burgers;', function(err, burger) {
-    //   if (err) throw err;
-    //     //console.log('The solution is: ', {burger});
-    //     res.render('index', {burger});
-    //     });
+
+    app.post('/add', function(req,res) {
+        console.log("Add a buger: %s",req.body.burger_name);
+        
+        var addBurger = {burger_name : req.body.burger_name};
+        connection.query('INSERT INTO burgers SET ?' , addBurger, function(err, result) {
+        if (err) throw err;
+        });
+        res.redirect('/');
     });
 
-app.post('/delete', function(req,res) {
-   console.log("Delete at /delete: %s",req);
-
-    // //mySQL commands
-    // connection.query('SELECT * FROM burgers;', function(err, burger) {
-    //   if (err) throw err;
-    //     //console.log('The solution is: ', {burger});
-    //     res.render('index', {burger});
-    //     });
+    //delete route -> back to home
+    app.put('/devour', function(req,res){
+        console.log("devoured burger id:",req.body.burgerid);
+        connection.query('UPDATE burgers SET devoured = ? WHERE ID = ?', [1, req.body.burgerid], function(err, result) {
+            if (err) throw err;
+        });
+        res.redirect('/');
     });
-app.post('/update', function(req,res) {
-   console.log("update at /update: %s",req);
-
-    // //mySQL commands
-    // connection.query('SELECT * FROM burgers;', function(err, burger) {
-    //   if (err) throw err;
-    //     //console.log('The solution is: ', {burger});
-    //     res.render('index', {burger});
-    //     });
-    });
-
 
 }
 
