@@ -1,0 +1,30 @@
+<h1>Burger Trough</h1>
+<h3>Design a Custom Burger.  Then devour it!  The emergency room is waiting.</h3>
+<div> 	
+  {{#each burger}}
+	<div>
+		{{#unless this.devoured}}
+		<pre>{{this.id}}. {{this.burger_name}}<span><button method="POST" action="/delete?_method=DELETE" class="button-size"type="submit">Devour it!</button></span></pre>
+		{{else}}
+		<p>you devoured {{this.id}}.{{this.burger_name}}</p>
+		{{/unless}}
+		
+		<!-- <form method="POST" action="/delete?_method=DELETE" class="button-size"> -->
+		<!-- <span><button method="POST" action="/delete?_method=DELETE" class="button-size"type="submit">Delete!</button></span> -->
+	<!-- </form> -->
+	
+	<!--<p>Or delete it by Clicking the "Delete" button.</p>-->
+	</div>
+  {{/each}}
+</div>
+
+<div>
+	<form method="POST" action="/update?_method=PUT" class="button-size">
+		<textarea class="form-control" type="text" name="user_plan"></textarea>
+		<button type="submit">Change it!</button>
+	</form>
+	<p>Write down the burger you want to build and Click the "Submit" button.</p>
+</div>
+<div>
+		
+</div>
