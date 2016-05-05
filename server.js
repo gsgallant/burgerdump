@@ -9,6 +9,7 @@ var path = require('path');
 var exphbs = require('express-handlebars');//handlebars
 var connection = require('./config/connection.js');//mysql connection
 var methodOverride = require('method-override');
+ var orm = require('./config/orm.js');
 // ==============================================================================
 // EXPRESS CONFIGURATION
 // This sets up the basic properties for our express server 
@@ -30,7 +31,7 @@ app.use(methodOverride('_method'));
 //setup handlesbars templating engine
 // ==============================================================================
 app.engine('handlebars', exphbs({
-    defaultLayout: 'main'
+    defaultLayout: 'mainSAVE'
 }));
 app.set('view engine', 'handlebars');
 
@@ -50,45 +51,6 @@ app.set('view engine', 'handlebars');
 
 require('./routing/api-routes.js')(app); 
 require('./routing/html-routes.js')(app);
-
-// ================================================================================
-// ROUTER
-// The below points our server to a series of "route" files.
-// These routes give our server a "map" of how to respond when users visit or request data from various URLs. 
-// ================================================================================
-// app.get('/', function(req,res) {
-//     //mySQL commands
-//     connection.query('SELECT * FROM burgers;', function(err, burger) {
-//       if (err) throw err;
-//         //console.log('The solution is: ', {burger});
-//         res.render('index', {burger});
-//         });
-//     });
-
-
-//delete route -> back to home
-// app.delete('/delete', function(req,res){
-//     //mySQL commands
-//     connection.query('DELETE FROM bugers WHERE ID = ?', [req.body.id], function(err, result) {
-//     if (err) throw err;
-//     });
-//     res.redirect('/');
-// });
-
-// //put route -> back to home
-// app.put('/update', function(req,res){
-//     console.log("PUT received: ->");
-//     console.log(req.body);
-//     //mySQL commands
-//     connection.query('UPDATE day_planner SET plan = ? WHERE ID = ?', [req.body.user_plan, 1], function(err, result) {
-//     if (err) throw err;
-//     });
-//     res.redirect('/');
-// });
-// // ==============================================================================
-// // LISTENER
-// // The below code effectively "starts" our server 
-// // ==============================================================================
 
 app.listen(PORT, function() {
     console.log("Burger Server listening on PORT: " + PORT);

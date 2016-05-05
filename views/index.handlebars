@@ -1,34 +1,27 @@
 
+<div class="panel panel-danger">
+      <div>   
+        {{#each burger}}
+          <div>
+            {{#unless this.devoured}}
 
-<h1>Burger Trough</h1>
-<h3>Design a Custom Burger.  Then devour it!</h3>
-<h3>The emergency room is waiting.</h3>
-<div> 	
-  {{#each burger}}
-	<div>
-		{{#unless this.devoured}}
-		
-		<pre>{{this.id}}. {{this.burger_name}}
-		<span><form method="POST" action="/devour?_method=PUT" class="button-size">
-		<button type="submit" name="burgerid" value={{this.id}}>Devour #{{this.id}}</button>
-		</form></span>
-		
-		{{else}}
-		
-		<p>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  YOU DEVOURED >>>>>>>>> >>>>>>>> {{this.id}}.{{this.burger_name}}</p>
-		
-		{{/unless}}
-		
-  {{/each}}
-</div>
+            <div class="panel-heading">
+              <h3 class="panel-title">{{this.id}}. {{this.burger_name}}</h3>
+                <div class="panel-body">
+                    <span><form method="POST" action="/devour?_method=PUT" class="button-size">
+                    <button type="submit" name="burgerid" value={{this.id}}>Devour</button>
+                    </form></span>
+                </div>
+            {{else}}
+    
+          <p>  YOU DEVOURED >> {{this.id}}.{{this.burger_name}}</p>
+    
+          {{/unless}}
 
-<div>
-	<form method="POST" action="/add" class="button-size">
-		<textarea class="form-control" type="text" name="burger_name"></textarea>
-		<button type="submit">Build My Burger!</button>
-	</form>
-	<p>Write down the burger you want to build and Click the "Submit" button.</p>
-</div>
-<div>
-		
+            </div>
+          
+
+          </div>  
+      </div>
+
 </div>

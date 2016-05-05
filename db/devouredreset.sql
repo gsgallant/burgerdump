@@ -1,0 +1,16 @@
+UPDATE `burgers_db`.`burgers` SET `devoured`='0' WHERE `id`='1';
+UPDATE `burgers_db`.`burgers` SET `devoured`='0' WHERE `id`='2';
+UPDATE `burgers_db`.`burgers` SET `devoured`='0' WHERE `id`='3';
+UPDATE `burgers_db`.`burgers` SET `devoured`='0' WHERE `id`='4';
+UPDATE `burgers_db`.`burgers` SET `devoured`='0' WHERE `id`='5';
+UPDATE `burgers_db`.`burgers` SET `devoured`='0' WHERE `id`='6';
+UPDATE `burgers_db`.`burgers` SET `devoured`='0' WHERE `id`='7';
+UPDATE `burgers_db`.`burgers` SET `devoured`='0' WHERE `id`='8';
+UPDATE `burgers_db`.`burgers` SET `devoured`='0' WHERE `id`='9';
+UPDATE `burgers_db`.`burgers` SET `devoured`='0' WHERE `id`='10';
+UPDATE `burgers_db`.`burgers` SET `devoured`='0' WHERE `id`='11';
+UPDATE `burgers_db`.`burgers` SET `devoured`='0' WHERE `id`='12';
+UPDATE `burgers_db`.`burgers` SET `devoured`='0' WHERE `id`='13';
+UPDATE `burgers_db`.`burgers` SET `devoured`='0' WHERE `id`='14';
+UPDATE `burgers_db`.`burgers` SET `devoured`='0' WHERE `id`='15';
+UPDATE `burgers_db`.`burgers` SET `devoured`='0' WHERE `id`='16';
