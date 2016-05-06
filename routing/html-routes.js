@@ -17,7 +17,7 @@ module.exports = function(app){
 	    	})
     });
 
-	app.use('/bkgrd',function(req, res){
+	app.use('/image',function(req, res){
 		res.sendFile(path.join(__dirname + '/assets/images/burger.jpg'));
 	});
 }

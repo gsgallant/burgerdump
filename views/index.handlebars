@@ -3,17 +3,21 @@
 	<div class="row">
 		<div class="col-xs-6 text-center" class="task">
 			<div class="row">
+			  <!--loop over the burger object and unless = 1 (which means 0 and not devoured in this context)-->
 			  {{#each burger}}
 			  	{{#unless this.devoured}}
-				<div class="col-xs-9 text-center">
-					<pre>{{this.id}}. {{this.burger_name}}
-					</pre>
-				</div>
-				<div class="col-xs-3 text-center">
-					<form method="POST" action="/devour?_method=PUT" class="button-size">
-						<button type="submit" name="burgerid" value={{this.id}} class="btn btn-danger">Devour it!</button>
-					</form>
-				</div>
+				
+					<div class="col-xs-9 text-center">
+						<pre>{{this.id}}. {{this.burger_name}}
+						</pre>
+					</div>
+					
+					<div class="col-xs-3 text-center">
+						<form method="POST" action="/devour?_method=PUT" class="button-size">
+							<button type="submit" name="burgerid" value={{this.id}} class="btn btn-danger btn-md">Devour it!</button>
+						</form>
+					</div>
+				
 				{{/unless}}
 			  {{/each}}
 			</div>
@@ -21,21 +25,11 @@
 		<div class="col-xs-6 text-center" class="task">
 			  {{#each burger}}
 			  	{{#if this.devoured}}
-			  		<input class="form-control" type="text" placeholder="{{this.id}} . {{this.burger_name}}" readonly>
+			  		
+			  		<input class="form-control" type="text" value="{{this.id}} . {{this.burger_name}}" readonly>
+				
 				{{/if}}
 			  {{/each}}
 		</div>
 	</div>
 </div>
-
-<!-- <div class="container">
-	<div class="row">
-		<div class="col-xs-12 text-center enter_section">
-			<form action="/add" method="POST">
-				<input type="text" class="form-control" name="burger_name" value="" id="enter_text">
-				<button type="submit" class="btn btn-primary" id="text-enter-button">Submit</button>
-			</form>
-			<p>Enter a burger you would like to eat!</p>
-		</div>
-	</div>
-</div> -->
