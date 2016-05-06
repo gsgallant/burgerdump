@@ -1,16 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Burger Trough</title>
-<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha384-fUMURLTdEcpeYHly3PAwggI3l2UvdHNg/I+8LRph7hLDcAZm77YfDx3Tjum9d3vK" crossorigin="anonymous">
+	<title>Burger Dump</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/superhero/bootstrap.min.css" rel="stylesheet" integrity="sha384-88w0u/oucDSTE30ETLLIobzhT+bQ6CSsiqQyLZpwHvve89eqUA9F2Db6ST6jGRLx" crossorigin="anonymous">
 </head>
 <body>
-<div class="jumbotron">
-  <h1>Burger Trough</h1>
-  <h3>Your Fastest Route To The Emergency Room!</h3>
+<div class="jumbotron text-center">
+  <h1>Burger Dump</h1>
+  <h4>Your Fastest Route To The Emergency Room!</h3>
+
+<div class="container">
+	<div class="row">
+		<div class="col-xs-offset-3 col-xs-6">
+			<form method="POST" action="/add" class="button-size">
+			<textarea class="form-control" rows="1" type="text" name="burger_name"></textarea>
+			<button type="submit" class="btn btn-danger">Build it!</button>
+			Type in the burger you want then "Build it!" button.
+			</form>
+		</div>
+	</div>
 </div>
 
-<div class="well well-lg">
+</div>
+
+<div background="/image">
   {{{body}}}
 </div>
 

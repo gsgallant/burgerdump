@@ -13,7 +13,11 @@ module.exports = function(app){
 //use orm to get all burgers from mysql
 	app.get('/', function(req,res) {
 	    orm.getAllBurgers(function(burger){
-	        	res.render('indexJD', {burger});
+	        	res.render('index', {burger});
 	    	})
     });
+
+	app.use('/bkgrd',function(req, res){
+		res.sendFile(path.join(__dirname + '/assets/images/burger.jpg'));
+	});
 }

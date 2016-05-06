@@ -8,7 +8,6 @@ var orm = {
         console.log('ORM get all burgers');
         connection.query('SELECT * FROM burgers;', function(err, burger) {
 	      if (err) throw err;
-	        // res.render('indexSAVE', {burger});
 	        callback(burger);
 	        });
 	    
@@ -21,7 +20,6 @@ var orm = {
             if (err) throw err;
             callback();
         });
-        // res.redirect('/');
     },
     
     addBurger: function(addBurger, callback) {
@@ -31,7 +29,6 @@ var orm = {
         callback();
         });
     }
-
 };
     
 module.exports = orm;
