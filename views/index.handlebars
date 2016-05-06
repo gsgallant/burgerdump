@@ -1,20 +1,23 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-xs-6 text-center" class="task">
+		<div class="col-xs-6 text-center">
+			<!-- <pre class="rowhead">Your Order Is Ready</pre> -->
+			<h4 align="center" class="rowhead"><u>Your Order Is Ready</u></h4>
 			<div class="row">
 			  <!--loop over the burger object and unless = 1 (which means 0 and not devoured in this context)-->
 			  {{#each burger}}
 			  	{{#unless this.devoured}}
 				
 					<div class="col-xs-9 text-center">
-						<pre>{{this.id}}. {{this.burger_name}}
-						</pre>
+
+					<h5 align="left">{{this.burger_name}}</h5>
+					
 					</div>
 					
 					<div class="col-xs-3 text-center">
-						<form method="POST" action="/devour?_method=PUT" class="button-size">
-							<button type="submit" name="burgerid" value={{this.id}} class="btn btn-danger btn-md">Devour it!</button>
+						<form method="POST" action="/devour?_method=PUT">
+						<button type="submit" name="burgerid" value={{this.id}} class="btn btn-danger btn-xs">Devour it!</button>
 						</form>
 					</div>
 				
@@ -22,12 +25,15 @@
 			  {{/each}}
 			</div>
 		</div>
-		<div class="col-xs-6 text-center" class="task">
+		<div class="col-xs-6 text-center">
+		<h4 align="center" class="rowhead"><u>You devoured it!&nbsp;&nbsp;&nbsp;<font color="red">The ER is WAITING!</font></u></h4>
+		<!-- <pre class="rowhead">In Your Belly Now</pre> -->
+			  
 			  {{#each burger}}
 			  	{{#if this.devoured}}
-			  		
-			  		<input class="form-control" type="text" value="{{this.id}} . {{this.burger_name}}" readonly>
-				
+
+			  		<h5 align="center">{{this.burger_name}}</h5>
+					
 				{{/if}}
 			  {{/each}}
 		</div>

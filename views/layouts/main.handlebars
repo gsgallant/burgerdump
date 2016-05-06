@@ -3,19 +3,28 @@
 <head>
 	<title>Burger Dump</title>
 <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/superhero/bootstrap.min.css" rel="stylesheet" integrity="sha384-88w0u/oucDSTE30ETLLIobzhT+bQ6CSsiqQyLZpwHvve89eqUA9F2Db6ST6jGRLx" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="/assets/css/main.css"> 
 </head>
-<body>
-<div class="jumbotron text-center">
-	 <h1>Burger Dump</h1>
-	<h4>Your Fastest Route To The Emergency Room!</h3>
+<header align="center">
 
+<br><br>
+<img src="/assets/images/eatmeburger.png" height="120px" width="120px">
+
+</header>
+<body>
+
+<div class="text-center">
+	 
+	 <h1 class="rowhead">Burger Dump</h1>
+	<h4 class="rowhead">Your Fastest Route To The Emergency Room!</h3>
+	<hr>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-offset-3 col-xs-6">
 				<form method="POST" action="/add" class="button-size">
-				<textarea class="form-control" rows="1" type="text" name="burger_name"></textarea>
-				<button type="submit" class="btn btn-success btn-sm">Build it!</button>
-				 Type in the burger you want then Build it!
+				<textarea class="form-control" rows="1" type="text" name="burger_name"></textarea>First type in the burger you want then
+				<button type="submit" class="btn btn-info btn-sm">Build it!</button>
+				 
 				</form>
 			</div>
 		</div>
