@@ -24,7 +24,15 @@ var orm = {
         if (err) throw err;
         callback();
         });
+    },
+
+    anotherBurger: function(burgerid, callback) {    
+        connection.query('UPDATE burgers SET devoured = ? WHERE ID = ?', [0, burgerid], function(err, result) {
+            if (err) throw err;
+            callback();
+        });
     }
+
 };
     
 module.exports = orm;

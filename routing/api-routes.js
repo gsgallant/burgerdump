@@ -25,6 +25,11 @@ module.exports = function(app){
         })
     });
 
+    app.put('/another', function(req,res){
+        orm.anotherBurger(req.body.burgerid, function(){
+            res.redirect('/');
+        })
+    });
 }
 
 
