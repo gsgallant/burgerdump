@@ -9,7 +9,7 @@
 			  {{#each burger}}
 			  	{{#unless this.devoured}}
 				
-					<div class="col-xs-9 text-center">
+					<div class="col-xs-7 text-center">
 
 					<h5 align="left">{{this.burger_name}}</h5>
 					
@@ -17,7 +17,7 @@
 					
 					<div class="col-xs-3 text-center">
 						<form method="POST" action="/devour?_method=PUT">
-						<button type="submit" name="burgerid" value={{this.id}} class="btn btn-danger btn-xs">Devour it!</button>
+							<button type="submit" name="burgerid" value={{this.id}} class="btn btn-danger btn-xs">Devour it!</button>
 						</form>
 					</div>
 				
@@ -25,14 +25,14 @@
 			  {{/each}}
 			</div>
 		</div>
-		<div class="col-xs-6 text-center">
+		<div class="col-xs-4 text-center">
 		<h4 align="center" class="rowhead"><u>You devoured it!&nbsp;&nbsp;&nbsp;<font color="red">The ER is WAITING!</font></u></h4>
 		<!-- <pre class="rowhead">In Your Belly Now</pre> -->
 			  
 			  {{#each burger}}
 			  	{{#if this.devoured}}
 
-			  		<h5 align="center">{{this.burger_name}}</h5>
+			  		<h5 align="left">{{this.burger_name}}</h5>
 					
 				{{/if}}
 			  {{/each}}
