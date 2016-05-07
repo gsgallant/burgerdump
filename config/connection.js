@@ -3,9 +3,9 @@
 var mysql      = require('mysql');
 
 var connection = mysql.createConnection({
-     host     : 'localhost', //for now, this will always be localhost
-     user     : 'root',  // this will be whatever user you use to connect to mysql
-     password : 'Thew1zardof0z',  // this is the password for the 'user' above
+     host     : 'd5x4ae6ze2og6sjo.cbetxkdyhwsb.us-east-1.rds.amazonaws.com', //for now, this will always be localhost
+     user     : 'fnfb028dmaxmenqw',  // this will be whatever user you use to connect to mysql
+     password : 'yg6obtyxsbsfzzah',  // this is the password for the 'user' above
      database : 'burgers_db'  // this is a database which you have on your install of mysql
 });
 
