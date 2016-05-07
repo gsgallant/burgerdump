@@ -18,3 +18,5 @@ connection.connect(function (err) {
    });
 //export this msql connection for use outside with require('./connection')
 module.exports = connection;
+
+//yg6obtyxsbsfzzah
