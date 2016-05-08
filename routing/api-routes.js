@@ -18,6 +18,8 @@ module.exports = function(app){
                 res.redirect('/');
         
             })
+        }else{
+            return;
         }
     });
 
