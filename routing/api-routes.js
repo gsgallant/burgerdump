@@ -13,9 +13,12 @@ module.exports = function(app){
 
 //uses the ORM addBurger
     app.post('/add', function(req,res) {
-        orm.addBurger(req.body.burger_name, function(){
-            res.redirect('/');
-        })
+        if(req.body.burger_name){
+            orm.addBurger(req.body.burger_name, function(){
+                res.redirect('/');
+        
+            })
+        }
     });
 
     //used orm devourBurger
