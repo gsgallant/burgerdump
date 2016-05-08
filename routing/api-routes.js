@@ -19,7 +19,7 @@ module.exports = function(app){
         
             })
         }else{
-            return;
+            res.redirect('/');
         }
     });
 
