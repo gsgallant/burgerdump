@@ -1,4 +1,6 @@
-# week-14-burger
+#App can be seen at
+http://burgerdump.herokuapp.com/
+
 #Screenshots:
 <p align="center">
 <span>
