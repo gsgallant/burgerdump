@@ -2,7 +2,8 @@
 #Screenshots:
 <p align="center">
 <span>
-<img src="https://github.com/gsgallant/screenshots/blob/master/burgerdump/Screen%20Shot%202016-06-16%20at%209.15.24%20AM.png" width="48%" height="auto"/>
+<img src="https://github.com/gsgallant/screenshots/blob/master/burgerdump/Screen%20Shot%202016-06-16%20at%2010.22.16%20PM.png" width="48%" height="auto"/>
+<img src="https://github.com/gsgallant/screenshots/blob/master/burgerdump/Screen%20Shot%202016-06-16%20at%2010.22.47%20PM.png" width="48%" height="auto"/>
 </span>
 </p>
 
